@@ -1,0 +1,433 @@
+// Animated Box
+.animated-box {
+    height: 200px;
+    width: 200px;
+    z-index: 500;
+    animation: intro-anim 5s 1s ease-in-out infinite;
+}
+
+@keyframes fills {
+  0% { fill: $light-grey; }
+  100% { fill: darken($light-grey, 5%); }
+}
+
+@keyframes fade {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes intro-anim {
+  0% { transform: translate3d(0,0,0) rotateX(0deg) scale(1); background-color: #FF0000;}
+  15% { transform: translate3d(-100%,50%,0) rotateX(20deg) scale(3);}
+  30% { transform: translate3d(400%,300%,0) rotateX(-300deg) rotateY(50deg) scale(0.2);}
+  45% { transform: translate3d(-50%,-90%,0) rotateX(360deg) rotateY(-300deg); background-color: #00FF00;}
+  60% { transform: translate3d(-30%,-100%,0) rotateX(0deg) scale(4);}
+  75% { transform: translate3d(300%,5%,0) rotateX(20deg) rotateY(-30deg);}
+  100% { transform: translate3d(0,0,0) rotateX(0deg) scale(1); background-color: #0000FF;}
+}
+
+
+
+.change-to-e {
+    animation: hide-b 2s 1s ease;
+    animation-fill-mode: both;
+}
+
+.change-to-b {
+    position: absolute;
+    margin-left: -0.58em;
+    animation: show-e 3s 1s ease;
+    animation-fill-mode: both;
+}
+
+@keyframes hide-b {
+    0% {opacity: 0.8;}
+    10% {opacity: 0;}
+    20% {opacity: 0.5;}
+    30% { opacity: 0;}
+    35% { opacity: 0.2;}
+    50% {opacity: 0.5;}
+    70% { opacity: 1;}
+    80% { opacity: 0;}
+    90% { opacity: 0.2;}
+    100% { opacity: 0;}
+}
+@keyframes show-e {
+    0% {opacity: 0;}
+    30% {opacity: 0;}
+    40% {opacity: 0.2;}
+    60% {opacity: 0.7;}
+    80% {opacity: 0.5;}
+    100% { opacity: 1;}
+}
+
+#Layer_2 {
+
+.path-e,
+.path-v,
+.path-e2,
+.path-r,
+.path-y,
+.path-t,
+.path-h,
+.path-i,
+.path-n,
+.path-g,
+.path-i2,
+.path-s,
+.path-a,
+.path-n2,
+.path-i3,
+.path-m,
+.path-a2,
+.path-t2,
+.path-e3,
+.path-d,
+  .path-1, .path-2, .path-3, .path-4 {
+    fill: $light-grey;
+    -webkit-animation: fill 3s 2s ease;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+}
+
+
+
+
+@-webkit-keyframes fill {
+  from {
+    fill: $light-grey;
+  }
+  to {
+    fill: #3db249;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+Animations
+
+
+
+*/
+
+#boat-animation {
+    position: relative;;
+    // max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+#hello-message {
+    position: absolute;
+    top:1em;
+    min-width: 100%;
+    font-size: 1.2em;
+  color: rgba(54, 70, 79, 1);
+    font-family: 'museo_sans_rounded_300regular', helvetica, sans-serif;
+}
+
+#hello-message p:first-of-type {
+      opacity: 0;
+      background-color: #FFE80B;
+        padding: 0.2em 0.5em;
+      color: #386F7F;
+      -webkit-animation: hello 5s 1s ease;
+      -moz-animation: hello 5s 1s ease;
+      animation: hello 5s 1s ease;
+}
+
+#hello-message p:nth-of-type(2) {
+      opacity: 0;
+      background-color: #FF5635;
+        padding: 0.2em 0.5em;
+      color: white;
+      white-space: nowrap;
+      -webkit-animation: hello-3 5.5s 2.3s ease reverse;
+      -moz-animation: hello-3 5.5s 2.3s ease reverse;
+      animation: hello-3 5.5s 2.3s ease reverse;
+}
+
+#hello-message p:nth-of-type(3) {
+    opacity: 0;
+    background-color: #b0ffcc;
+    padding: 0.2em 0.5em;
+    color: #386F7F;
+    white-space: nowrap;
+    -webkit-animation: hello-2 6s 2.9s ease;
+    -moz-animation: hello-2 6s 2.9s ease;
+    animation: hello-2 6s 2.9s ease;
+}
+
+#hello-message p:nth-of-type(4) {
+    opacity: 0;
+    background-color: rgb(50,70,79);
+    padding: 0.2em 0.5em;
+    color: white;
+    border: 1px solid #ff9200;
+    white-space: nowrap;
+    -webkit-animation: hello-4 6.5s 8.5s ease;
+    -moz-animation: hello-4 6.5s 8.5s ease;
+    animation: hello-4 6.5s 8.5s ease;
+}
+
+.boat {
+  position: absolute;
+  bottom: 1em;
+  height:5em;
+  opacity: 0;
+  width: 5em;
+  background-image: url(http://jessegortarez.com/images/sailboat.png);
+  background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  -webkit-animation: boat-move 25s 12s ease,
+    boat-rock 1s alternate infinite;
+  -moz-animation: boat-move 25s 12s ease,
+    boat-rock 1s alternate infinite;
+  animation: boat-move 25s 12s ease,
+    boat-rock 1s alternate infinite;
+}
+
+.wind {
+  position: absolute;
+  bottom: 1em;
+  opacity: 0;
+  height:10em;
+  width: 10em;
+  background-image: url(http://jessegortarez.com/images/wind.png);
+  background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  -webkit-animation: wind-move 10s 10s 2 ease-in-out;
+  -moz-animation: wind-move 10s 10s 2 ease-in-out;
+  animation: wind-move 10s 10s 2 ease-in-out;
+}
+
+
+.wind-1 {
+  position: absolute;
+  bottom: 1em;
+  opacity: 0;
+  height:10em;
+  width: 10em;
+  background-image: url(http://jessegortarez.com/images/wind.png);
+  background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+  -webkit-animation: wind-move-1 10s 12s 3 ease-in-out;
+  -moz-animation: wind-move-1 10s 12s 3 ease-in-out;
+  animation: wind-move-1 10s 12s 3 ease-in-out;
+}
+
+
+.arrow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1em;
+    font-family: 'museo_sans_rounded_300regular', helvetica, sans-serif;
+}
+
+.arrow p:first-of-type {
+    position: relative;
+    font-size: 1em;
+  opacity: 0;
+  background-color: #c7a6ff;
+  padding: 0.2em 0.5em;
+  margin-top: .5em;
+  color: #386F7F;
+  z-index: 100;
+    white-space:nowrap;
+    -webkit-animation: show-arrow 4s 6.1s ease;
+  -moz-animation: show-arrow 4s 6.1s ease-in-out;
+  animation: show-arrow 4s 6.1s ease-in-out;
+}
+
+.arrow p:nth-of-type(2) {
+    margin-top: 0.5em;
+    opacity: 0;
+    font-size: 4em;
+    color: #c7a6ff;
+    -webkit-transform: rotate(40deg);
+    transform: rotate(40deg);
+    -webkit-animation: show-arrow 4s 6.1s ease;
+  -moz-animation: show-arrow 4s 6.1s ease-in-out;
+  animation: show-arrow 4s 6.1s ease-in-out;
+}
+
+.gtlt {
+    -webkit-animation: flash 1s 10.5s 4 ease;
+  -moz-animation: flash 1s 10.5s 4 ease;
+  animation: flash 1s 10.5s 4 ease;
+}
+
+/* WEBKIT PREFIX ANIMATION */
+@-webkit-keyframes flash {
+    0%{color:#FF5635; }
+    50% {color:rgb(0,174, 239);}
+    100%{color:#FF5635; }
+}
+
+@-webkit-keyframes hello {
+  0% {opacity: 0; margin-left: 100%;}
+  5% {opacity: 0.5; margin-left: 50%;}
+  15% {opacity: 1; margin-left: 50%;}
+  40% {opacity: 1;}
+  60% {margin-left: 5%;}
+  100% {opacity: 0; margin-left: -100%;}
+}
+
+@-webkit-keyframes hello-2 {
+  0% {opacity: 0; margin-left: -100%;}
+  5% {opacity: 1;}
+  60% {margin-left: 60%;}
+  85% {margin-left: 60%;}
+  100% {opacity: 1; margin-left: 100%;}
+}
+
+@-webkit-keyframes hello-3 {
+  0% {opacity: 0; margin-left: 100%;}
+  5% {opacity: 1;}
+  70% {opacity: 1; margin-left: 5%;}
+  80% {opacity: 0.9; margin-left: 5%;}
+  100% {opacity: 0; margin-left: -100%;}
+}
+
+@-webkit-keyframes hello-4 {
+  0% {opacity: 0; margin-left: 100%;}
+  5% {opacity: 1;}
+  60% {opacity: 1; margin-left: 5%;}
+  90% {opacity: 0.9; margin-left: 5%;}
+  100% {opacity: 0; margin-left: -100%;}
+}
+
+@-webkit-keyframes boat-move {
+  0% { margin-left: 0; opacity: 0.4;}
+  10% {opacity: 1;}
+  20% { margin-left: 0;}
+  30% {margin-left:28%;}
+  100% {margin-left: 105%; opacity: 1;}
+}
+
+
+
+@-webkit-keyframes boat-rock {
+  0% {-webkit-transform: rotate(-5deg);}
+
+  100% {-webkit-transform: rotate(2deg);}
+}
+
+@-webkit-keyframes wind-move {
+  0% { margin-left: -50%; opacity: 0;}
+  45% {margin-left: -20%; opacity: 0.8;}
+  70% {opacity: 1;}
+  100% {margin-left: 2%; opacity: 0;}
+}
+
+@-webkit-keyframes wind-move-1 {
+  0% { margin-left: -50%; opacity: 0;}
+  45% {margin-left: -20%; opacity: 0.8;}
+  70% {opacity: 1;}
+  100% {margin-left: 5%; opacity: 0;}
+}
+
+@-webkit-keyframes show-arrow {
+  0% {opacity: 0; margin-left: 100%;}
+  5% {opacity: 1; }
+  50% {margin-left: 0%;}
+  80% {margin-left: 0%; opacity: 1;}
+  100% {opacity: 0; margin-left: 100%;}
+}
+
+/* ANIMATION KEYFRAMES */
+@keyframes flash {
+    0%{color:#FF5635; }
+    50% {color:rgb(0,174, 239);}
+    100%{color:#FF5635; }
+}
+
+@keyframes hello {
+  0% {opacity: 0; margin-left: 100%;}
+  5% {opacity: 0.5; margin-left: 50%;}
+  15% {opacity: 1; margin-left: 50%;}
+  40% {opacity: 1;}
+  60% {margin-left: 5%;}
+  100% {opacity: 0; margin-left: -100%;}
+}
+
+@keyframes hello-2 {
+  0% {opacity: 0; margin-left: -100%;}
+  5% {opacity: 1;}
+  60% {margin-left: 60%;}
+  85% {margin-left: 60%;}
+  100% {opacity: 1; margin-left: 100%;}
+}
+
+@keyframes hello-3 {
+  0% {opacity: 0; margin-left: 100%;}
+  5% {opacity: 1;}
+  70% {opacity: 1; margin-left: 5%;}
+  80% {opacity: 0.9; margin-left: 5%;}
+  100% {opacity: 0; margin-left: -100%;}
+}
+
+@keyframes hello-4 {
+  0% {opacity: 0; margin-left: 100%;}
+  5% {opacity: 1;}
+  60% {opacity: 1; margin-left: 5%;}
+  90% {opacity: 0.9; margin-left: 5%;}
+  100% {opacity: 0; margin-left: -100%;}
+}
+
+@keyframes boat-move {
+  0% { margin-left: 0; opacity: 0.4;}
+  10% {opacity: 1;}
+  20% { margin-left: 0;}
+  30% {margin-left:28%;}
+  100% {margin-left: 105%; opacity: 1;}
+}
+
+
+
+@keyframes boat-rock {
+  0% {transform: rotate(-5deg);}
+
+  100% {transform: rotate(2deg);}
+}
+
+@keyframes wind-move {
+  0% { margin-left: -50%; opacity: 0;}
+  45% {margin-left: -20%; opacity: 0.8;}
+  70% {opacity: 1;}
+  100% {margin-left: 2%; opacity: 0;}
+}
+
+@keyframes wind-move-1 {
+  0% { margin-left: -50%; opacity: 0;}
+  45% {margin-left: -20%; opacity: 0.8;}
+  70% {opacity: 1;}
+  100% {margin-left: 5%; opacity: 0;}
+}
+
+@keyframes show-arrow {
+  0% {opacity: 0; margin-left: 100%;}
+  5% {opacity: 1; }
+  50% {margin-left: 0%;}
+  80% {margin-left: 0%; opacity: 1;}
+  100% {opacity: 0; margin-left: 100%;}
+}
+
+/* END ANIMATION */
