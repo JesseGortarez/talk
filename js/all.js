@@ -3,9 +3,12 @@ $(function () {
 
     impress().init();
 
-    $('#boat-animation *, #l4b *').css('animation-play-state', 'paused');
+    $('#boat-animation *, #l4b *, #big *').css('animation-play-state', 'paused');
     $('#l4b *').click(function(){
         $('#l4b *').css('animation-play-state', 'running');
+    });
+    $('#big *').click(function(){
+        $('#big *').css('animation-play-state', 'running');
     });
     $('#boat-animation *').click(function(){
         $('#boat-animation *').css('animation-play-state', 'running');

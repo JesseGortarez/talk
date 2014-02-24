@@ -25,7 +25,18 @@
   75% { transform: translate3d(300%,5%,0) rotateX(20deg) rotateY(-30deg);}
   100% { transform: translate3d(0,0,0) rotateX(0deg) scale(1); background-color: #0000FF;}
 }
-
+.animatable-props h1 {
+    position: absolute;
+    top: 10%;
+    text-align: center;
+}
+.animatable-props p {
+    position: absolute;
+    top: 100%;
+    cursor: pointer;
+    animation: scroll-up 5s ease;
+    animation-fill-mode: both;
+}
 
 
 .change-to-e {
@@ -59,6 +70,11 @@
     60% {opacity: 0.7;}
     80% {opacity: 0.5;}
     100% { opacity: 1;}
+}
+
+@keyframes scroll-up {
+    0% {opacity: 0.5; transform: translate3d(0, 0, 0);}
+    100% {opacity: 0; transform: translate3d(0, -8000px, 0);}
 }
 
 #Layer_2 {
