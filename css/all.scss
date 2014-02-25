@@ -200,35 +200,35 @@ svg {
     3D positioning along Z axis.
 */
 
-#title {
-    padding: 0;
+code {
+    font-family: Anonymous Pro;
+    width: 100%;
+    margin-top: 1em;
+    float: none;
+    display: block;
+    font-size: 1.2em;
+    &.real-life {
+        color: $lookout-green;
+        &:nth-of-type(2) {
+            color: red;
+        }
+    }
 }
 
-#title .try {
-    font-size: 64px;
-    position: absolute;
-    top: -0.5em;
-    left: 1.5em;
 
-    -webkit-transform: translateZ(20px);
-    -moz-transform:    translateZ(20px);
-    -ms-transform:     translateZ(20px);
-    -o-transform:      translateZ(20px);
-    transform:         translateZ(20px);
+#transitions-vs-animations {
+
 }
 
-#title h1 {
-    font-size: 190px;
-
-    -webkit-transform: translateZ(50px);
-    -moz-transform:    translateZ(50px);
-    -ms-transform:     translateZ(50px);
-    -o-transform:      translateZ(50px);
-    transform:         translateZ(50px);
-}
-
-#title .footnote {
-    font-size: 32px;
+#intro {
+    margin-top: -0.5em;
+    margin-left: -2.5em;
+    font-size: 8em;
+    text-align: center;
+    backface-visibility: hidden;
+    h1 {
+        z-index: 3000;
+    }
 }
 
 /*
@@ -238,29 +238,23 @@ svg {
     Let's move to 'big thoughts' with centered text and custom font sizes.
 */
 #big {
-    width: 600px;
+    width: 1100px;
     text-align: center;
-    font-size: 60px;
+    font-size: 1em;
     line-height: 1;
 }
 
-#big b {
-    display: block;
-    font-size: 250px;
-    line-height: 250px;
-}
-
-#big .thoughts {
-    font-size: 90px;
-    line-height: 150px;
+#libraries-resources-tools {
+    width: 1200px;
+    font-size: 2em;
 }
 
 /*
     'Tiny ideas' just need some tiny styling.
 */
 #tiny {
-    width: 500px;
-    text-align: center;
+    width: 1500px;
+    text-align: left;
 }
 
 /*

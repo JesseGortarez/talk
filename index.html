@@ -29,39 +29,138 @@
 
 <div id="impress">
 
-    <div id="overview1" class="step" data-x="3000" data-y="1500" data-scale="80">
+    <div id="overview1" class="step" data-x="3000" data-y="1500" data-scale="2000">
     </div>
 
-    <div class="step slide" data-x="-3500" data-y="-1500">
+    <div id="intro" class="step slide" data-x="2400" data-y="0" data-rotate-x="-90">
+        <h1>Animation Madness</h1>
         <div class="animated-box">
         </div>
     </div>
 
-    <div id="overview2" class="step" data-x="3000" data-y="1500" data-scale="10">
-    </div>
 
-    <div class="step slide outline" data-x="-2000" data-y="-2000">
+
+    <div class="step slide outline" data-x="-2000" data-y="-2000" data-z="-200">
         <h1>Animation Madness</h1>
 
         <ul>
-            <li>WaaS: Whimsy as a service</li>
+            <li>Overview: Transitions vs. Animations</li>
+            <li>WaaS</li>
                 <ul>
                     <li>Use cases and examples: L4B, Privacy Policy, personal page</li>
                 </ul>
-            <li>Overview: Transitions vs. Animations</li>
-                <ul>
-                    <li>Properties that can be animated</li>
-                    <li>Anatomy of a transition</li>
-                    <li>Anatomy of a keyframe</li>
-                </ul>
-            <li>CSS Animation plays well with JS</li>
+            <li>CSS + JS</li>
             <li>Libraries, Resources & Tools</li>
-                <ul>
-                    <li>Animation libraries</li>
-                    <li>People to follow</li>
-                    <li>Autoprefixer</li>
-                </ul>
         </ul>
+    </div>
+
+        <div id="transitions-vs-animations" class="step" data-x="0" data-y="0" data-scale="2" data-rotate="360">
+        <h1>Transitions vs. Animations</h1>
+        <br>
+    </div>
+
+    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="1">
+        <p>Definition</p>
+        <p>Animations differ from transitions in that transitions are only triggered when a state change occurs (such as hovering over an element), whereas animations can be triggered independent of a state change, usually a set amount of time after a page loads, or on an event, via JS. Also, a transition animation always occurs on any properties that change their values when a state change occurs, whereas a CSS animation can animate between property values even if those properties are not set on the default state of the element being animated.</p>
+    </div>
+
+    <div id="big" class="step" data-x="5000" data-y="-10000" data-rotate-x="0" data-rotate-y="0" data-scale="1">
+        <h1>Properties that can be transitioned</h1>
+        <div class="animatable-props">
+            <table align="center" cellpadding="10" cellspaceing="10">
+                <tr>
+                <td>background-color</td>
+                    <td>as color</td>
+                </tr>
+                <td>background-position</td>
+                    <td>as repeatable list of simple list of length, percentage, or calc</td>
+                    </tr>
+                <tr><td>border-bottom-color</td> <td>as color</td></tr>
+                <tr><td>border-bottom-width</td> <td>as length</td></tr>
+                <tr><td>border-left-color </td>  <td>as color</td></tr>
+                <tr><td>border-left-width </td>  <td>as length</td></tr>
+                <tr><td>border-right-color </td> <td>as color</td></tr>
+                <tr><td>border-right-width </td> <td>as length</td></tr>
+                <tr><td>border-spacing </td> <td>as simple list of length</td></tr>
+                <tr><td>border-top-color </td>   <td>as color</td></tr>
+                <tr><td>border-top-width  </td>  <td>as length</td></tr>
+                <tr><td>bottom </td> <td>as length, percentage, or calc</td></tr>
+                <tr><td>clip  </td>  <td>as rectangle</td></tr>
+                <tr><td>color </td>  <td>as color</td></tr>
+                <tr><td>font-size </td>  <td>as length</td></tr>
+                <tr><td>font-weight </td><td>as font weight</td></tr>
+                <tr><td>height </td> <td>as length, percentage, or calc</td></tr>
+                <tr><td>left  </td>  <td>as length, percentage, or calc</td></tr>
+                <tr><td>letter-spacing </td> <td>as length</td></tr>
+                <tr><td>line-height</td> <td>as either number or length</td></tr>
+                <tr><td>margin-bottom  </td> <td>as length</td></tr>
+                <tr><td>margin-left </td><td>as length</td></tr>
+                <tr><td>margin-right  </td>  <td>as length</td></tr>
+                <tr><td>margin-top </td> <td>as length</td></tr>
+                <tr><td>max-height </td> <td>as length, percentage, or calc</td></tr>
+                <tr><td>max-width  </td> <td>as length, percentage, or calc</td></tr>
+                <tr><td>min-height </td> <td>as length, percentage, or calc</td></tr>
+                <tr><td>min-width  </td> <td>as length, percentage, or calc</td></tr>
+                <tr><td>opacity</td> <td>as number</td></tr>
+                <tr><td>outline-color  </td> <td>as color</td></tr>
+                <tr><td>outline-width  </td> <td>as length</td></tr>
+                <tr><td>padding-bottom </td> <td>as length</td></tr>
+                <tr><td>padding-left   </td> <td>as length</td></tr>
+                <tr><td>padding-right </td> <td> as length</td></tr>
+                <tr><td>padding-top </td><td>as length</td></tr>
+                <tr><td>right  </td> <td>as length, percentage, or calc</td></tr>
+                <tr><td>text-indent </td><td>as length, percentage, or calc</td></tr>
+                <tr><td>text-shadow </td><td>as shadow list</td></tr>
+                <tr><td>top </td> <td>as length, percentage, or calc</td></tr>
+                <tr><td>vertical-align </td> <td>as length</td></tr>
+                <tr><td>visibility </td> <td>as visibility</td></tr>
+                <tr><td>width </td>  <td>as length, percentage, or calc</td></tr>
+                <tr><td>word-spacing</td>    <td>as length</td></tr>
+                <tr><td>z-index</td> <td>as integer</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-1000" data-rotate="300" data-scale="1">
+        <h1>Anatomy of a Transition</h1>
+            <code class="generic">
+                .transition-syntax {
+                    transition: [transition-property] [transition-duration] [transition-timing-function] [transition-delay];
+                }
+            </code>
+
+            <code class="real-life">
+                .button {
+                    transition: background-color 0.3s 1s ease-in-out;
+                }
+            </code>
+
+            <code class="real-life">
+                .button {
+                    transition: all 0.3s ease-in-out;
+                }
+            </code>
+            <a href="#" class="example-button">
+                Button
+            </a>
+    </div>
+
+    <div id="anatomy-of-a-keyframe" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="10">
+        <h1>Anatomy of a Keyframe</h1>
+        <h2>Animation @ block:</h2>
+        <code>
+            @keyframes spin {<br>
+              &nbsp;&nbsp;from { transform: rotate(0deg); }<br>
+              &nbsp;&nbsp;to &nbsp;&nbsp;{ transform: rotate(360deg); }<br>
+            }
+        </code>
+    </div>
+
+    <div id="js-and-animations" class="step" data-x="6700" data-y="-300" data-scale="4">
+        <h1>Using JavaScript with CSS Animations</h1>
+
+        <p>Typical use is to dynamically apply or trigger animation starts</p>
+        <p>RequestAnimationFrame, Animation play state</p>
     </div>
 
     <div class="step slide" data-x="-500" data-y="-1500">
@@ -402,32 +501,23 @@ kiTDWpIkGdaSJMmwliTJsJYkSYa1JEmGtSRJyrP/L8AA9jo9nKMP5AAAAAAASUVORK5CYII=" transf
 
 
     <div class="step slide boat-animation" data-x="1500" data-y="-1500">
-
         <div id="boat-animation">
                  <div class="main-page-animation">
                         <img src="http://jessegortarez.com/img/newcity.png" class="sf-city"/>
-
-                                <div id="hello-message">
-
-                                            <p>Hello!</p>
-
-                                            <p>My name is Jesse. I create things.</p>
-
-                                            <p>I live and work in San Francisco.</p>
-
-                                            <p> <span class="gtlt">&lt;&lt;</span> Click around a bit. Or just watch the boat.</p>
-
-                                        </div>
-
+                        <div id="hello-message">
+                            <p>Hello!</p>
+                            <p>My name is Jesse. I create things.</p>
+                            <p>I live and work in San Francisco.</p>
+                            <p> <span class="gtlt">&lt;&lt;</span> Click around a bit. Or just watch the boat.</p>
+                        </div>
                         <div class="boat"></div>
                         <div class="wind"></div>
                         <div class="wind-1"></div>
-
                         <div class="arrow">
-                                            <p>(somewhere over here)</p>
-                                                <p>&rarr;</p>
-                            </div>
-                      </div>
+                            <p>(somewhere over here)</p>
+                            <p>&rarr;</p>
+                        </div>
+              </div>
         </div>
 
     </div>
@@ -440,121 +530,22 @@ kiTDWpIkGdaSJMmwliTJsJYkSYa1JEmGtSRJyrP/L8AA9jo9nKMP5AAAAAAASUVORK5CYII=" transf
     </div>
 
 
-    <div id="title" class="step" data-x="0" data-y="0" data-scale="2" data-rotate="360">
-        <h1>Transitions vs. Animations</h1>
-        <br>
+    <div id="libraries-resources-tools" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+        <h1>Libraries, Resources and Tools</h1>
+
+        <ul>
+            <li>animate.css</li>
+            <li>animo.js</li>
+            <li>http://www.minimamente.com/magic-css3-animations/</li>
+            <li>http://www.jsdb.io/animation/</li>
+        </ul>
     </div>
 
-    <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="1">
-        <p>Definition</p>
-        <p>Animations differ from transitions in that transitions are only triggered when a state change occurs (such as hovering over an element), whereas animations can be triggered independent of a state change, usually a set amount of time after a page loads, or on an event, via JS. Also, a transition animation always occurs on any properties that change their values when a state change occurs, whereas a CSS animation can animate between property values even if those properties are not set on the default state of the element being animated.</p>
-    </div>
-
-    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="1">
-        <h1>Properties that can be animated</h1>
-        <div class="animatable-props">
-            <p> color   color
-font shorthand  (see individual properties)
-font-size   length or percentage
-font-size-adjust    number
-font-stretch    keywords (in steps)
-font-weight number or keywords (excluding bolder, lighter)
-letter-spacing  length
-line-height number or length
-max-lines (for overflow)    integer
-text-decoration-color   color
-text-emphasis-color color
-text-indent length, percentage, or calc
-text-shadow shadow
-text-size-adjust    percentage
-vertical-align  keywords, length, or percentage
-word-spacing    length or percentage
-Box properties  background shorthand    (see individual properties)
-background-color    color
-background-image 2  images, gradients
-background-position as repeatable, simple list of percentage, length, or calc
-background-size 4   as repeatable, simple list of percentage, length, or calc
-border shorthand    (see individual properties)
-border-color shorthand  (see individual properties)
-border-top-color etc3   color
-border-radius shorthand (see individual properties)
-border-top-right-radius etc3    length (one or two values)
-border-spacing  as simple list of length
-border-top etc shorthands3  (see individual properties)
-border-width shorthand  (see individual properties)
-border-top-width etc3   length
-box-shadow  as shadow list (at risk)
-clip    rectangle
-crop    rectangle
-height, min-height, max-height  length, percentage, or calc
-margin  (see individual properties)
-margin-top etc3 length
-opacity number
-outline-color   color
-outline-offset  length
-outline-width   length
-padding shorthand   (see individual properties)
-padding-top etc3    length
-width, min-width, max-width length, percentage, or calc
-Positioning properties  top, right, bottom, left    length, percentage, or calc
-offset-before, offset-end, offset-after, offset-start   length or percentage
-visibility 5    visibility
-z-index integer
-zoom    number
-Multi-column layout properties  columns shorthand   (see individual properties)
-column-count    integer
-column-gap  length
-column-rule shorthand   (see individual properties)
-column-rule-color   color
-column-rule-width   length
-column-width    length
-Flexbox properties  flex shorthand  (see individual properties)
-flex-grow   number (except to/from 0)
-flex-shrink number (except to/from 0)
-flex-basis  same as width (length, percentage, or calc)
-order   integer
-Transforms properties   perspective length
-perspective-origin  as simple list of length, percentage, or calc
-transform   as transform
-transform-origin    as simple list of length, percentage, or calc
-SVG properties  fill    paint server
-fill-opacity    float
-flood-color color or keywords
-lighting-color  color or keywords
-marker-offset   length
-stop-color  color
-stop-opacity    float
-stroke  paint server
-stroke-dasharray    list of numbers
-stroke-dashoffset   number
-stroke-miterlimit   number
-stroke-opacity  float
-stroke-width    float
-viewport-fill   color
-viewport-fill-opacity   color
-</p>
-        </div>
-    </div>
-
-    <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
-        <p>and <b>tiny</b> ideas</p>
-    </div>
-
-    <div id="ing" class="step" data-x="3500" data-y="-850" data-rotate="270" data-scale="6">
-        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
-    </div>
-
-    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
-        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
-    </div>
-
-    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
-        <p>want to know more?</p>
-        <q><a href="http://github.com/bartaz/impress.js">use the source</a>, Luke!</q>
-    </div>
-
-    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
-        <p>one more thing...</p>
+    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="1">
+        <h1>Autoprefixer</h1>
+        <p>
+            <a href="https://github.com/nDmitry/grunt-autoprefixer">https://github.com/nDmitry/grunt-autoprefixer</a>
+        </p>
     </div>
 
     <div id="everything-is-animated" class="step slide" data-x="8000" data-y="8500">
