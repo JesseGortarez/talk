@@ -3,12 +3,15 @@ $(function () {
 
     impress().init();
 
-    $('#boat-animation *, #l4b *, #big *').css('animation-play-state', 'paused');
+    $('#boat-animation *, #l4b *, #transitionable-properties *, #intro *').css('animation-play-state', 'paused');
+    $('#intro').click(function(){
+        $('#intro *').css('animation-play-state', 'running');
+    });
     $('#l4b *').click(function(){
         $('#l4b *').css('animation-play-state', 'running');
     });
-    $('#big *').click(function(){
-        $('#big *').css('animation-play-state', 'running');
+    $('#transitionable-properties *').click(function(){
+        $('#transitionable-properties *').css('animation-play-state', 'running');
     });
     $('#boat-animation *').click(function(){
         $('#boat-animation *').css('animation-play-state', 'running');
@@ -23,11 +26,9 @@ $(function () {
         }
     });
 
-// Face Animation
     var runAnimation = function(id, animation){
         var id = '#'+id;
         var animationName = animation;
-
         $(id).css('opacity', '0');
         if ($(id).hasClass('present')){
             $(id).css('opacity', '1');
@@ -74,8 +75,11 @@ $(function () {
             runAnimation('face', 'fills');
         }, 12000);
     });
-    $('#everything-is-animated').hover(function(){
+    $('#everything-is-animated').click(function(){
         runAnimation('everything-is-animated', 'fill');
+        setInterval(function(){
+            runAnimation('everything-is-animated', 'fill');
+        }, 12000);
     });
 
 });
